@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Ikhsan Nur Rafid - Portfolio</title>
+    <meta name="description" content="Portfolio of Muhammad Ikhsan Nur Rafid - Passionate developer creating innovative solutions with clean, efficient code and modern technologies.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="floating-particles" id="particles"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav style="position: fixed; top: 0; width: 100%; z-index: 50; background: rgba(10, 10, 23, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid hsla(217, 100%, 64%, 0.2);">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem;">
+            <div style="font-size: 1.25rem; font-weight: bold;" class="gradient-text">Muhammad Ikhsan Nur Rafid</div>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex" style="display: none; gap: 2rem;">
+                <button onclick="scrollToSection('home')" class="nav-link text-white">Home</button>
+                <button onclick="scrollToSection('about')" class="nav-link text-white">About</button>
+                <button onclick="scrollToSection('skills')" class="nav-link text-white">Skills</button>
+                <button onclick="scrollToSection('contact')" class="nav-link text-white">Contact</button>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden" style="background: none; border: none; color: white; cursor: pointer; padding: 0.5rem;">
+                <i data-lucide="menu" style="width: 24px; height: 24px;"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden" style="border-top: 1px solid hsla(217, 100%, 64%, 0.2); padding: 1rem 1.5rem;">
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                <button onclick="scrollToSection('home'); toggleMobileMenu()" class="nav-link text-white" style="text-align: left;">Home</button>
+                <button onclick="scrollToSection('about'); toggleMobileMenu()" class="nav-link text-white" style="text-align: left;">About</button>
+                <button onclick="scrollToSection('skills'); toggleMobileMenu()" class="nav-link text-white" style="text-align: left;">Skills</button>
+                <button onclick="scrollToSection('contact'); toggleMobileMenu()" class="nav-link text-white" style="text-align: left;">Contact</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative;">
+        <div class="container text-center">
+            <div style="margin-bottom: 2rem;">
+                <p class="text-primary" style="font-size: 1.125rem; margin-bottom: 1rem; font-weight: 500;">Welcome to my portfolio</p>
+                <h1 class="gradient-text hero-title" style="font-size: 4rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.1;">
+                    Muhammad Ikhsan Nur Rafid
+                </h1>
+                <p class="text-gray-300 hero-subtitle" style="font-size: 1.5rem; margin-bottom: 2rem; max-width: 48rem; margin-left: auto; margin-right: auto;">
+                    Passionate developer creating innovative solutions with clean, efficient code and modern technologies.
+                </p>
+                <div style="display: flex; flex-direction: column; gap: 1rem; align-items: center;">
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                        <button onclick="scrollToSection('skills')" class="btn-primary">
+                            <i data-lucide="code" style="width: 16px; height: 16px;"></i>
+                            View Skills
+                        </button>
+                        <a href="https://www.linkedin.com/in/muhammad-ikhsan-nur-rafid-4b33aa326/" class="btn-outline">
+                            <i data-lucide="linkedin" style="width: 16px; height: 16px;"></i>
+                            View Linkedin
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" style="padding: 5rem 0; background: hsla(240, 3.7%, 10.9%, 0.3);">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 4rem;">
+                <h2 class="text-white section-title" style="font-size: 3rem; font-weight: bold; margin-bottom: 1rem;">About Me</h2>
+                <div style="width: 6rem; height: 0.25rem; background: var(--primary); margin: 0 auto; border-radius: 9999px;"></div>
+            </div>
+            <div style="max-width: 64rem; margin: 0 auto;">
+                <div class="card-hover" style="padding: 3rem;">
+                    <div style="display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center;">
+                        <div class="md:grid-cols-2" style="display: grid; gap: 3rem; align-items: center;">
+                            <div>
+                                <div style="width: 16rem; height: 16rem; margin: 0 auto; background: linear-gradient(135deg, hsla(217, 100%, 64%, 0.2), hsla(217, 100%, 64%, 0.05)); border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid hsla(217, 100%, 64%, 0.3); box-shadow: 0 25px 50px hsla(217, 100%, 64%, 0.2);">
+                                    <div style="width: 12rem; height: 12rem; background: hsla(217, 100%, 64%, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                                        <img src="profil.png" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                                <h3 class="text-primary" style="font-size: 1.5rem; font-weight: 600;">Muhammad Ikhsan Nur Rafid</h3>
+                                <p class="text-gray-300" style="font-size: 1.125rem; line-height: 1.7;">
+                                    I'm an aspiring developer with a strong curiosity and passion for learning. Though I'm still at the beginning of my journey, I'm driven by a deep desire to grow and explore the world of technology.
+                                </p>
+                                <p class="text-gray-300" style="font-size: 1.125rem; line-height: 1.7;">
+                                    I enjoy experimenting, building small projects, and learning something new every day. I believe that consistent effort, combined with the right mindset, will help me become a better developer over time.
+                                </p>
+                                <p class="text-gray-300" style="font-size: 1.125rem; line-height: 1.7;">
+                                    With ambition as my fuel and curiosity as my compass, I'm excited to keep moving forward — one line of code at a time.
+                                </p>
+                                <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                                    <span style="padding: 0.5rem 1rem; background: hsla(217, 100%, 64%, 0.2); color: var(--primary); border: 1px solid hsla(217, 100%, 64%, 0.3); border-radius: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                                        <i data-lucide="laptop" style="width: 16px; height: 16px;"></i>
+                                        Full Stack Developer
+                                    </span>
+                                    <span style="padding: 0.5rem 1rem; background: hsla(217, 100%, 64%, 0.2); color: var(--primary); border: 1px solid hsla(217, 100%, 64%, 0.3); border-radius: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                                        <i data-lucide="bot" style="width: 16px; height: 16px;"></i>
+                                        AI Enthusiast
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" style="padding: 5rem 0;">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 4rem;">
+                <h2 class="text-white section-title" style="font-size: 3rem; font-weight: bold; margin-bottom: 1rem;">Skills & Projects</h2>
+                <div style="width: 6rem; height: 0.25rem; background: var(--primary); margin: 0 auto; border-radius: 9999px;"></div>
+                <p class="text-gray-300" style="font-size: 1.125rem; margin-top: 1.5rem; max-width: 32rem; margin-left: auto; margin-right: auto;">
+                    Technologies and tools I use to bring ideas to life
+                </p>
+            </div>
+            
+            <!-- Frontend Technologies -->
+            <div style="margin-bottom: 3rem;">
+                <h3 class="text-primary" style="font-size: 1.5rem; font-weight: 600; margin-bottom: 2rem; text-align: center;">Frontend Development</h3>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;" class="md:grid-cols-3 lg:grid-cols-4">
+                    <div class="skill-card">
+                        <div style="width: 4rem; height: 4rem; margin: 0 auto 1rem; background: hsla(217, 100%, 64%, 0.2); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                            <i data-lucide="code" style="width: 2rem; height: 2rem; color: var(--primary);"></i>
+                        </div>
+                        <h4 class="text-white" style="font-weight: 600; margin-bottom: 0.5rem;">React</h4>
+                        <p class="text-gray-400" style="font-size: 0.875rem;">Component-based UI library</p>
+                    </div>
+                    <div class="skill-card">
+                        <div style="width: 4rem; height: 4rem; margin: 0 auto 1rem; background: hsla(217, 100%, 64%, 0.2); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                            <i data-lucide="code" style="width: 2rem; height: 2rem; color: var(--primary);"></i>
+                        </div>
+                        <h4 class="text-white" style="font-weight: 600; margin-bottom: 0.5rem;">JavaScript</h4>
+                        <p class="text-gray-400" style="font-size: 0.875rem;">Modern ES6+ features</p>
+                    </div>
+                    <div class="skill-card">
+                        <div style="width: 4rem; height: 4rem; margin: 0 auto 1rem; background: hsla(217, 100%, 64%, 0.2); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                            <i data-lucide="globe" style="width: 2rem; height: 2rem; color: var(--primary);"></i>
+                        </div>
+                        <h4 class="text-white" style="font-weight: 600; margin-bottom: 0.5rem;">HTML5</h4>
+                        <p class="text-gray-400" style="font-size: 0.875rem;">Semantic markup</p>
+                    </div>
+                    <div class="skill-card">
+                        <div style="width: 4rem; height: 4rem; margin: 0 auto 1rem; background: hsla(217, 100%, 64%, 0.2); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                            <i data-lucide="globe" style="width: 2rem; height: 2rem; color: var(--primary);"></i>
+                        </div>
+                        <h4 class="text-white" style="font-weight: 600; margin-bottom: 0.5rem;">CSS3</h4>
+                        <p class="text-gray-400" style="font-size: 0.875rem;">Responsive design</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backend Technologies -->
+            <div style="margin-bottom: 3rem;">
+                <h3 class="text-primary" style="font-size: 1.5rem; font-weight: 600; margin-bottom: 2rem; text-align: center;">Backend Development</h3>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;" class="md:grid-cols-3 lg:grid-cols-4">
+                    <div class="skill-card">
+                        <div style="width: 4rem; height: 4rem; margin: 0 auto 1rem; background: hsla(217, 100%, 64%, 0.2); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                            <i data-lucide="server" style="width: 2rem; height: 2rem; color: var(--primary);"></i>
+                        </div>
+                        <h4 class="text-white" style="font-weight: 600; margin-bottom: 0.5rem;">PHP</h4>
+                        <p class="text-gray-400" style="font-size: 0.875rem;">Server-side scripting language</p>
+                    </div>
+                    <div class="skill-card">
+                        <div style="width: 4rem; height: 4rem; margin: 0 auto 1rem; background: hsla(217, 100%, 64%, 0.2); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                            <i data-lucide="server" style="width: 2rem; height: 2rem; color: var(--primary);"></i>
+                        </div>
+                        <h4 class="text-white" style="font-weight: 600; margin-bottom: 0.5rem;">Laravel</h4>
+                        <p class="text-gray-400" style="font-size: 0.875rem;">Web application framework</p>
+                    </div>
+                    <div class="skill-card">
+                        <div style="width: 4rem; height: 4rem; margin: 0 auto 1rem; background: hsla(217, 100%, 64%, 0.2); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                            <i data-lucide="database" style="width: 2rem; height: 2rem; color: var(--primary);"></i>
+                        </div>
+                        <h4 class="text-white" style="font-weight: 600; margin-bottom: 0.5rem;">MySQL</h4>
+                        <p class="text-gray-400" style="font-size: 0.875rem;">Relational database</p>
+                    </div>
+                    <div class="skill-card">
+                        <div style="width: 4rem; height: 4rem; margin: 0 auto 1rem; background: hsla(217, 100%, 64%, 0.2); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                            <i data-lucide="code" style="width: 2rem; height: 2rem; color: var(--primary);"></i>
+                        </div>
+                        <h4 class="text-white" style="font-weight: 600; margin-bottom: 0.5rem;">Python</h4>
+                        <p class="text-gray-400" style="font-size: 0.875rem;">Backend development</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools & Others -->
+            <div>
+                <h3 class="text-primary" style="font-size: 1.5rem; font-weight: 600; margin-bottom: 2rem; text-align: center;">Projects</h3>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;" class="md:grid-cols-3 lg:grid-cols-4">
+                    <div class="skill-card">
+                        <div style="width: 4rem; height: 4rem; margin: 0 auto 1rem; background: hsla(217, 100%, 64%, 0.2); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                            <i data-lucide="layout-list" style="width: 2rem; height: 2rem; color: var(--primary);"></i>
+                        </div>
+                        <h4 class="text-white" style="font-weight: 600; margin-bottom: 0.5rem;">To-Do List Website</h4>
+                        <p class="text-gray-400" style="font-size: 0.875rem;">Middle Project for BNCC Backend-Development</p>
+                    </div>
+                    <div class="skill-card">
+                        <div style="width: 4rem; height: 4rem; margin: 0 auto 1rem; background: hsla(217, 100%, 64%, 0.2); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                            <i data-lucide="bot" style="width: 2rem; height: 2rem; color: var(--primary);"></i>
+                        </div>
+                        <h4 class="text-white" style="font-weight: 600; margin-bottom: 0.5rem;">Lux AI - Smart Discord Bot</h4>
+                        <p class="text-gray-400" style="font-size: 0.875rem;">Generative AI Discord Bot by using Gemini API. Coded using Python</p>
+                    </div>
+                    <div class="skill-card">
+                        <div style="width: 4rem; height: 4rem; margin: 0 auto 1rem; background: hsla(217, 100%, 64%, 0.2); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                            <i data-lucide="code" style="width: 2rem; height: 2rem; color: var(--primary);"></i>
+                        </div>
+                        <h4 class="text-white" style="font-weight: 600; margin-bottom: 0.5rem;">Lux AI Landing Page</h4>
+                        <p class="text-gray-400" style="font-size: 0.875rem;">Landing page for Lux AI Discord Bot</p>
+                    </div>
+                    <div class="skill-card">
+                        <div style="width: 4rem; height: 4rem; margin: 0 auto 1rem; background: hsla(217, 100%, 64%, 0.2); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                            <i data-lucide="figma" style="width: 2rem; height: 2rem; color: var(--primary);"></i>
+                        </div>
+                        <h4 class="text-white" style="font-weight: 600; margin-bottom: 0.5rem;">NUMI - Math App (UI/UX Design)</h4>
+                        <p class="text-gray-400" style="font-size: 0.875rem;">UI/UX design for a math learning mobile application</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="padding: 5rem 0; background: hsla(240, 3.7%, 10.9%, 0.3);">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 4rem;">
+                <h2 class="text-white section-title" style="font-size: 3rem; font-weight: bold; margin-bottom: 1rem;">Get In Touch</h2>
+                <div style="width: 6rem; height: 0.25rem; background: var(--primary); margin: 0 auto; border-radius: 9999px;"></div>
+                <p class="text-gray-300" style="font-size: 1.125rem; margin-top: 1.5rem; max-width: 32rem; margin-left: auto; margin-right: auto;">
+                    Let's collaborate and create something amazing together
+                </p>
+            </div>
+            
+            <div style="max-width: 64rem; margin: 0 auto;">
+                <div style="display: grid; gap: 2rem;" class="md:grid-cols-3">
+                    <div class="contact-card">
+                        <div style="width: 4rem; height: 4rem; margin: 0 auto 1.5rem; background: hsla(217, 100%, 64%, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i data-lucide="mail" style="width: 2rem; height: 2rem; color: var(--primary);"></i>
+                        </div>
+                        <h3 class="text-white" style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">Email</h3>
+                        <p class="text-gray-400">iskydrgnevr389@email.com</p>
+                        <p class="text-gray-400" style="font-size: 0.875rem; margin-top: 0.5rem;">Feel free to reach out</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div style="width: 4rem; height: 4rem; margin: 0 auto 1.5rem; background: hsla(217, 100%, 64%, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i data-lucide="linkedin" style="width: 2rem; height: 2rem; color: var(--primary);"></i>
+                        </div>
+                        <h3 class="text-white" style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">LinkedIn</h3>
+                        <p class="text-gray-400">muhammad-ikhsan-nur-rafid</p>
+                        <p class="text-gray-400" style="font-size: 0.875rem; margin-top: 0.5rem;">Let's connect professionally</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div style="width: 4rem; height: 4rem; margin: 0 auto 1.5rem; background: hsla(217, 100%, 64%, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i data-lucide="github" style="width: 2rem; height: 2rem; color: var(--primary);"></i>
+                        </div>
+                        <h3 class="text-white" style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">GitHub</h3>
+                        <p class="text-gray-400">Ikhsaaan334</p>
+                        <p class="text-gray-400" style="font-size: 0.875rem; margin-top: 0.5rem;">Check out my projects</p>
+                    </div>
+                </div>
+                
+                <div class="text-center" style="margin-top: 3rem;">
+                    <p class="text-gray-300" style="font-size: 1.125rem; margin-bottom: 1.5rem;">
+                        Available for freelance projects and full-time opportunities
+                    </p>
+                    <div style="display: flex; justify-content: center; gap: 1.5rem;">
+                        <a href="https://www.linkedin.com/in/muhammad-ikhsan-nur-rafid-4b33aa326/" style="color: rgb(156, 163, 175); transition: color 0.3s ease; text-decoration: none;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='rgb(156, 163, 175)'">
+                            <i data-lucide="linkedin" style="width: 24px; height: 24px;"></i>
+                        </a>
+                        <a href="https://www.instagram.com/rapit.zn/" style="color: rgb(156, 163, 175); transition: color 0.3s ease; text-decoration: none;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='rgb(156, 163, 175)'">
+                            <i data-lucide="instagram" style="width: 24px; height: 24px;"></i>
+                        </a>
+                        <!-- <a href="#" style="color: rgb(156, 163, 175); transition: color 0.3s ease; text-decoration: none;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='rgb(156, 163, 175)'">
+                            <i data-lucide="message-circle" style="width: 24px; height: 24px;"></i>
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="padding: 2rem 0; border-top: 1px solid hsla(217, 100%, 64%, 0.2);">
+        <div class="container text-center">
+            <p class="text-gray-400">
+                © 2024 Muhammad Ikhsan Nur Rafid. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
